@@ -9,7 +9,7 @@ worst_syn = ['bigo', 'big o', 'big oh', 'worst', 'worst case']
 average_syn = ['theta', 'big theta', 'average', 'average case']
 best_syn = ['omega', 'big omega', 'best', 'best case']
 ops_type = ['access', 'search', 'insertion', 'deletion']
-special_algos = ['Dijkstra\'s algorithm', 'prims algorithm', 'bellman ford algorithm', 'floyd warshall algorithm', 'topological sort', 'sleep sort']
+special_algos = ['dijkstras algorithm', 'prims algorithm', 'bellman ford algorithm', 'floyd warshall algorithm', 'topological sort', 'sleep sort']
 
 
 algorithms = {
@@ -117,7 +117,7 @@ algorithms = {
         },
         'Space Complexity': 'Order of n'
     },
-    'Dijkstra\'s algorithm': {
+    'dijkstras algorithm': {
         'Time Complexity': {
             'average': 'Theta of E log V ',
             'worst': 'Order of V squared '
@@ -386,8 +386,7 @@ def complexity(dstruct_algo, an_type, complexity_type, operation_type):
             return question(complexity_msg)
 
         #alexa might send some params in uppercase convert everything to lower case to find correct result
-        if dstruct_algo is not 'Dijkstra\'s algorithm':
-            dstruct_algo = dstruct_algo.lower()
+        dstruct_algo = dstruct_algo.lower()
         if an_type:
             an_type.lower()
         if complexity_type:
